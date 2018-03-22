@@ -1,7 +1,7 @@
 
 public class Player {
 	
-	SpaceType type;
+	public SpaceType type;
 	private int score=2;
 	private boolean movePoss=true;
 	private Piece placement;
