@@ -1,3 +1,5 @@
+import java.awt.Point;
+
 public class Board {
 
 	private int size;
@@ -21,15 +23,26 @@ public class Board {
 		Values[lenHgt/2][lenHgt/2-1]=Piece.type.BLACK;
 	}
 	
+	public SpaceType getType(Point point)
+	{
+		return Values[(int)point.getX()][(int)point.getY()];
+	}
+	
+	public void setType(Point point, SpaceType Type)
+	{
+		Values[(int)point.getX()][(int)point.getY()]=Type;
+	}
+	
 	public SpaceType findIndex(int x,int y)
 	{
 	return Values[y][x];
 	}
 	
-	public int[] findPiece(Piece piece)
+	public Point findPiece(Piece piece)
 	{
 		return piece.getCoord();
 	}
+	
 	public String toString()
 	{
 		StringBuilder build=new StringBuilder();
@@ -53,4 +66,8 @@ public class Board {
 		return build.toString();
 	}
 	
+	public int getLenHgt()
+	{
+		return lenHgt;
+	}
 }
