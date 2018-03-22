@@ -1,3 +1,4 @@
+import java.awt.Point;
 
 public class Piece {
 
@@ -5,7 +6,7 @@ public class Piece {
 	public static SpaceType type;
 	private int coordX;
 	private int coordY;
-	boolean isTrapped=false;
+	private boolean isTrapped=false;
 	
 	Piece(SpaceType type, int coorX, int coordY)
 	{
@@ -14,8 +15,8 @@ public class Piece {
 		this.type=type;
 	}
 	
-	public int[] getCoord() {
-		int[] coord= {coordX,coordY};
+	public Point getCoord() {
+		Point coord=new Point(coordX,coordY);
 		return coord;
 	}
 	
