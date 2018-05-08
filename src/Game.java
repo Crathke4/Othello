@@ -2,7 +2,7 @@ import java.awt.Point;
 
 public class Game {
 
-	public Player black=new Player(),white=new Player();
+	public Player black=new Player(SpaceType.BLACK),white=new Player(SpaceType.WHITE);
 	public Player currentPlayer=white;
 	public Player opponent=black;
 	public Board gameBoard;
@@ -11,9 +11,8 @@ public class Game {
 	Game(int boardSize)
 	{
 		gameBoard=new Board(boardSize);
-		black.type=SpaceType.BLACK;
-		white.type=SpaceType.WHITE;
 	}
+	
 	public void switchPlayer() {
 		Player temp=currentPlayer;
 		currentPlayer=opponent;

@@ -6,6 +6,11 @@ public class Player {
 	private boolean movePoss=true;
 	private Piece placement;
 	
+	
+	public Player(SpaceType type)
+	{
+		this.type=type;
+	}
 	public int getScore() {
 		return score;
 	}

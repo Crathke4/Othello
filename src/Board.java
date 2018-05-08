@@ -18,8 +18,8 @@ public class Board {
 		}
 		//Setting starting pieces
 		Values[lenHgt/2-1][lenHgt/2-1]=Piece.type.WHITE;
-		Values[lenHgt/2][lenHgt/2]=Piece.type.BLACK;
-		Values[lenHgt/2-1][lenHgt/2]=Piece.type.WHITE;
+		Values[lenHgt/2][lenHgt/2]=Piece.type.WHITE;
+		Values[lenHgt/2-1][lenHgt/2]=Piece.type.BLACK;
 		Values[lenHgt/2][lenHgt/2-1]=Piece.type.BLACK;
 	}
 	
